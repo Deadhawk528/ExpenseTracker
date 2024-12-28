@@ -14,7 +14,7 @@ const Navbar = () => {
     const logoutHandler = async () => {
         try {
             //Network call
-            const res = await axios.get("http://localhost:8080/api/v1/user/logout");
+            const res = await axios.get("https://expensetracker-j2vn.onrender.com/api/v1/user/logout");
             if(res.data.success){
                 navigate('/login')
                 toast.success(res.data.message)
